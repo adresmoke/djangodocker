@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Home</title></head>
+<body>
+    <h1>{{ message|safe }}</h1>
+    {% if user.is_authenticated %}
+    {% csrf_token %}
+        <p>Привет, {{ user.username }}! <form method="post" action="/accounts/logout/">
+    {% csrf_token %}
+    <button type="submit">Выход</button>
+</form></p>
+    {% else %}
+        <a href="/accounts/login/">Войти</a>
+    {% endif %}
+</body>
+</html>
