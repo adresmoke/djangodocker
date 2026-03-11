@@ -13,6 +13,8 @@ sudo docker run -d --name djprod -p 80:8000 django:prod
 sudo docker stop djprod
 sudo docker rm djprod
 ```
+login: adre
+passwd: 123
 
 ![После авторизации](img/1.png)
 ![homepage](img/2.png)
